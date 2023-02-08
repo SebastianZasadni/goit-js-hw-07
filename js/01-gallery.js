@@ -6,14 +6,7 @@ const createGallery = galleryItems
 .map(item => `<div class="gallery__item"><a class="gallery__link">
 <img class="gallery__image" src="${item.preview}" data-source="${item.original}" alt="${item.description}"></a></div>`)
 .join("");
-const instance = basicLightbox.create(`
-<div class="modal">
-    <p>
-        Your first lightbox with just a few lines of code.
-        Yes, it's really that simple.
-    </p>
-</div>
-`);
+const instance = basicLightbox.create(`<div class="modal"></div>`);
     
 const selectImage = event => {
     const selectedImage = event.target.dataset.source; 
