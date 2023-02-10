@@ -10,7 +10,7 @@ const instance = basicLightbox.create(`<div class="modal"></div>`);
     
 const selectImage = event => {
     const selectedImage = event.target.dataset.source; 
-    const altImage = event.target.description;
+    const altImage = event.target.alt;
     instance.show();
     const modal = document.querySelector('.modal');
     modal.style.maxWidth = "1140px";
